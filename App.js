@@ -16,14 +16,14 @@ class App extends Component {
     };
   }
 
-  // Lifecycle method to start the timer
+ 
   componentDidMount() {
     this.interval = setInterval(() => {
       this.setState((prevState) => ({ timeInterval: prevState.timeInterval + 1 }));
     }, 1000);
   }
 
-  // Cleanup timer when the component unmounts
+ 
   componentWillUnmount() {
     clearInterval(this.interval);
   }
